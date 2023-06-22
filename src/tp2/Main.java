@@ -17,8 +17,7 @@ public class Main {
 			base[i][1] = new double[3];
 		}
 		String lines[] = input.split("\n");
-		int i = 0;
-		while (i < lines.length) {
+		for (int i = 0; i < lines.length; i++) {
 			String c[] = lines[i].split(",");
 			if (c[0].equals("L")) {
 				base[i][1][0] = 1;
@@ -40,7 +39,6 @@ public class Main {
 			for (int j = 1; j < c.length; j++) {
 				base[i][0][j - 1] = Double.parseDouble(c[j]);
 			}
-			i++;
 		}
 		double startTime = System.currentTimeMillis();
 		execute(10000);
